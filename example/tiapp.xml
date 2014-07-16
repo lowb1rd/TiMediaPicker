@@ -3,10 +3,10 @@
     <id>ti.mediapicker.example</id>
     <name>mediapicker-example</name>
     <version>1.0</version>
-    <publisher>nils</publisher>
-    <url>http://</url>
+    <publisher>l0wbird</publisher>
+    <url>https://github.com/lowb1rd/TiMediaPicker</url>
     <description>not specified</description>
-    <copyright>2014 by nils</copyright>
+    <copyright>2014 by lowb1rd</copyright>
     <icon>appicon.png</icon>
     <persistent-wifi>false</persistent-wifi>
     <prerendered-icon>false</prerendered-icon>

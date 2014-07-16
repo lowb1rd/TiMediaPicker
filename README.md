@@ -6,6 +6,8 @@ This module shows the gallery of the phone and allows selecting single or multip
 
 On iOS, the ALAssets Library is used for accessing the media files. On Android the MediaStore is used to query for media files on the device. Only the media information is fetched in the native part of the module. The complete picker UI is done by a CommonJS Titanium module in pure Javascript and is therefor easy customizable.
 
+https://github.com/lowb1rd/TiMediaPicker
+
 ## Features
 
 - Landscape and Portrait Orientation support
