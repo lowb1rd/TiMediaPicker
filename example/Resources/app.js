@@ -15,7 +15,6 @@ buttonImage.addEventListener('click', function() {
 	var callback = function(items) {
 		var views = [];
 		var iterate = function(item) {
-			Ti.API.info(item.id);
 			MediaPicker.getImageByURL({
 				key: item.url,
 				id: item.id,
