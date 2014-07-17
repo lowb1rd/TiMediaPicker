@@ -64,67 +64,67 @@ The app.js shows a minimal use case for the complete module. All picked images a
 ### Module
 #### getAssetGroups(options)
 **Gets all galleries / asset groups.**
-options {
-	type: "photos" or "videos"
-	success: callback function {
-		key : {
-			name: The name of the gallery
-			count: The number of files in this gallery
-			image: Blob, preview image for the gallery
-		},
-		..
-	}
-}
+    options {
+    	type: "photos" or "videos"
+    	success: callback function {
+    		key : {
+    			name: The name of the gallery
+    			count: The number of files in this gallery
+    			image: Blob, preview image for the gallery
+    		},
+    		..
+    	}
+    }
 
 #### getThumb(options)
 **Gets a single Thumbnail**
-options {
-	url: image id (android) or asset url (ios)
-	success: {
-		image: blob or file path to thumb
-		width: image width in pixels (iOS only)
-		height: image height in pixels (iOS only)
-		duration: video duration in seconds (iOS only)
-		size: video size in bytes (iOS only)
-	}
-}
+    options {
+    	url: image id (android) or asset url (ios)
+    	success: {
+    		image: blob or file path to thumb
+    		width: image width in pixels (iOS only)
+    		height: image height in pixels (iOS only)
+    		duration: video duration in seconds (iOS only)
+    		size: video size in bytes (iOS only)
+    	}
+    }
 
 #### getPhotos(options)
 **Returns all image information in a certain gallery**
-options {
-	nr: the gallery to query. identified by the key (android) or sequential number (ios)
-	type: "photos" or "videos"
-	success: callback function {
-		items: [
-			{
-				width: image width in pixels (android > 2.3.3 only)
-				height: image height in pixels (android > 2.3.3 only)
-				duration: video duration in seconds (android > 2.3.3 only)
-			},
-			..
-		]
-	}
-}
+    options {
+    	nr: the gallery to query. identified by the key (android) or sequential number (ios)
+    	type: "photos" or "videos"
+    	success: callback function {
+    		items: [
+    			{
+    				width: image width in pixels (android > 2.3.3 only)
+    				height: image height in pixels (android > 2.3.3 only)
+    				duration: video duration in seconds (android > 2.3.3 only)
+    			},
+    			..
+    		]
+    	}
+    }
 
 #### getBytesByURL(options)
 **iOS only. Used to get the original (full) asset by assetURL. On android, the file path can be used direcly to get the file.**
-options {
-	key: assetURL of the media
-	success: callback function {
-		path: path to the full asset in tmp directory. can be used with Ti.Filesystem.getFile()
-	}
-}
+    options {
+    	key: assetURL of the media
+    	success: callback function {
+    		path: path to the full asset in tmp directory. can be used with Ti.Filesystem.getFile()
+    	}
+    }
 
 #### getImageByURL(options, payload)
 **Get the FullScreenImage / large thumbnail of an asset. On android a payload object can be passed as a second argument. On iOS the payload is a key of the options object.**
-options: {
-	key: assetURL / path of the media
-	id: ID of the media (android only)
-	payload: Object, passed back to success callback
-	success: callback function {
-		image: blob or file path
-		width: image width in pixels
-		height: image height in pixels
-		size: size in bytes
-	}
-}
+    options: {
+    	key: assetURL / path of the media
+    	id: ID of the media (android only)
+    	payload: Object, passed back to success callback
+    	success: callback function {
+    		image: blob or file path
+    		width: image width in pixels
+    		height: image height in pixels
+    		size: size in bytes
+    	}
+    }
