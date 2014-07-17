@@ -51,9 +51,11 @@ The app.js shows a minimal use case for the complete module. All picked images a
 #### MediaPicker.show(callback, maximum, type, message)
 **Opens the picker view. Parameters:**
 *callback* is called once media has been selected. The selected items are given as an array to the callback function. Every array value is an object containing the following information:
+
   - *url* asset:// or filepath to the original image
   - *id* android only, image ID
   - *metadata* Object with width, height and duration (video only)
+
 *maximum* maximum number of selectable assets. Once this limit is reached, an alert message is shown. If this limit is 1, the previously selected image is automatically deselected
 *type* "photos" or "videos"
 *message* optional. A message bar displayed at the top of the grid
@@ -64,6 +66,7 @@ The app.js shows a minimal use case for the complete module. All picked images a
 ### Module
 #### getAssetGroups(options)
 **Gets all galleries / asset groups.**
+
     options {
     	type: "photos" or "videos"
     	success: callback function {
@@ -78,6 +81,7 @@ The app.js shows a minimal use case for the complete module. All picked images a
 
 #### getThumb(options)
 **Gets a single Thumbnail**
+
     options {
     	url: image id (android) or asset url (ios)
     	success: {
@@ -91,6 +95,7 @@ The app.js shows a minimal use case for the complete module. All picked images a
 
 #### getPhotos(options)
 **Returns all image information in a certain gallery**
+
     options {
     	nr: the gallery to query. identified by the key (android) or sequential number (ios)
     	type: "photos" or "videos"
@@ -108,6 +113,7 @@ The app.js shows a minimal use case for the complete module. All picked images a
 
 #### getBytesByURL(options)
 **iOS only. Used to get the original (full) asset by assetURL. On android, the file path can be used direcly to get the file.**
+
     options {
     	key: assetURL of the media
     	success: callback function {
@@ -117,6 +123,7 @@ The app.js shows a minimal use case for the complete module. All picked images a
 
 #### getImageByURL(options, payload)
 **Get the FullScreenImage / large thumbnail of an asset. On android a payload object can be passed as a second argument. On iOS the payload is a key of the options object.**
+
     options: {
     	key: assetURL / path of the media
     	id: ID of the media (android only)
