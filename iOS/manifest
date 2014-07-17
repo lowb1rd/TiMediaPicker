@@ -5,13 +5,13 @@
 version: 1.0.0
 apiversion: 2
 description: -
-author: Nils Kraemer (neunzehn83.de)
+author: Nils (github.com/lowb1rd)
 license: -
-copyright: 2014 Nils Kraemer
+copyright: 2014 Nils 
 
 
 # these should not be edited
-name: iOS
+name: TiMediaPicker
 moduleid: ti.mediapicker
 guid: 741238c8-4420-4949-9a8c-beefcd8fda56
 platform: iphone

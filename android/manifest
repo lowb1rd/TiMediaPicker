@@ -5,13 +5,13 @@
 version: 1.0.0
 apiversion: 2
 description: -
-author: Nils Kraemer (neunzehn83.de)
+author: Nils (github.com/lowb1rd)
 license: -
-copyright: 2014 Nils Kraemer
+copyright: 2014 Nils
 
 
 # these should not be edited
-name: android
+name: TiMediaPicker
 moduleid: ti.mediapicker
 guid: eebf3061-a7c1-4f22-b665-87ea9771c0b0
 platform: android
