@@ -190,7 +190,7 @@
 
 
 		UIImage *thumbnail = [UIImage imageWithCGImage:[result thumbnail]];
-		CGSize newSize = CGSizeMake(75, 75);
+		CGSize newSize = CGSizeMake(150, 150);
 		UIGraphicsBeginImageContext(newSize);
 		[thumbnail drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
 		UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
