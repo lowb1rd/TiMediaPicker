@@ -328,7 +328,7 @@ exports.MediaPicker.prototype.show = function(cb, max, type, message) {
 			
 			if (_env.android) {
 				// Ti.Filesystem.applicationDataDirectory ?
-				var file = Ti.Filesystem.getFile(Ti.Filesystem.tempDirectory, iv.id+'.png');
+				var file = Ti.Filesystem.getFile(Ti.Filesystem.tempDirectory, iv.id+'.png_');
 				if (file.exists()) {
 					//Ti.API.info('from cache ' + file.nativePath);
 					iv.path = file.nativePath;
@@ -346,7 +346,7 @@ exports.MediaPicker.prototype.show = function(cb, max, type, message) {
 					queue--;
 					if (!e.image) return;
 					if (_env.android && e.image.apiName != 'Ti.Blob') {	
-						var file = Ti.Filesystem.getFile(Ti.Filesystem.tempDirectory, iv.id+'.png');
+						var file = Ti.Filesystem.getFile(Ti.Filesystem.tempDirectory, iv.id+'.png_');
 						var file2 = Ti.Filesystem.getFile('file://'+e.image);
 						var blob = file2.read();
 						
