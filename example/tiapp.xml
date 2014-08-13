@@ -2,7 +2,7 @@
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>ti.mediapicker.example</id>
     <name>mediapicker-example</name>
-    <version>1.0</version>
+    <version>1.0.1</version>
     <publisher>l0wbird</publisher>
     <url>https://github.com/lowb1rd/TiMediaPicker</url>
     <description>not specified</description>
@@ -16,7 +16,7 @@
     <navbar-hidden>false</navbar-hidden>
     <analytics>true</analytics>
     <guid>61800c81-9973-46fd-91ca-c5a29ca30ff6</guid>
-    <property name="ti.ui.defaultunit" type="string">system</property>
+    <property name="ti.ui.defaultunit" type="string">dp</property>
     <iphone>
         <orientations device="iphone">
             <orientation>Ti.UI.PORTRAIT</orientation>
@@ -38,7 +38,7 @@
         <theme>default</theme>
     </mobileweb>
     <modules>
-    	<module>ti.mediapicker</module>
+        <module>ti.mediapicker</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
@@ -48,5 +48,5 @@
         <target device="mobileweb">false</target>
         <target device="tizen">false</target>
     </deployment-targets>
-    <sdk-version>3.2.3.GA</sdk-version>
+    <sdk-version>3.3.0.GA</sdk-version>
 </ti:app>
