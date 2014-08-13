@@ -228,7 +228,7 @@ public class AndroidModule extends KrollModule
 	@Kroll.method
 	public void getThumb(KrollDict options) {
 		final KrollFunction successCallback = (KrollFunction) options.get("success");
-		final KrollFunction createCallback = (KrollFunction) options.get("create");
+		//final KrollFunction createCallback = (KrollFunction) options.get("create");
 			
 		KrollDict d = new KrollDict();
         Activity activity = TiApplication.getInstance().getCurrentActivity(); 
@@ -252,7 +252,7 @@ public class AndroidModule extends KrollModule
 		
 			if (cursor == null || cursor.getCount() == 0) {
 				d.put("created", 1);
-				createCallback.callAsync((KrollObject)createCallback,new KrollDict());
+				//createCallback.callAsync((KrollObject)createCallback,new KrollDict());
 				
 				// create thumb
 				Bitmap thumb = MediaStore.Images.Thumbnails.getThumbnail(activity.getContentResolver(), id, MediaStore.Images.Thumbnails.MINI_KIND, null);
