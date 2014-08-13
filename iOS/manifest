@@ -15,4 +15,4 @@ name: TiMediaPicker
 moduleid: ti.mediapicker
 guid: 741238c8-4420-4949-9a8c-beefcd8fda56
 platform: iphone
-minsdk: 3.2.2.GA
+minsdk: 3.3.0.GA
