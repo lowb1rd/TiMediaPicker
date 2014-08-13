@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.1
+apiversion: 101
+description: -
+author: Nils (github.com/lowb1rd)
+license: -
+copyright: 2014 Nils 
+
+# these should not be edited
+name: TiMediaPicker
+moduleid: ti.mediapicker
+guid: 741238c8-4420-4949-9a8c-beefcd8fda56
+platform: iphone
+minsdk: 3.3.0.GA

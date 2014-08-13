@@ -1,9 +1,8 @@
 #appname: mediapicker-example
-#appid: ti.mediapicker.example
-#type: mobile
-#guid: 61800c81-9973-46fd-91ca-c5a29ca30ff6
-#version: 1.0
-#publisher: not specified
-#url: not specified
+#publisher: nils
+#url: http://
 #image: appicon.png
-#desc: not specified
+#appid: ti.mediapicker.example
+#desc: undefined
+#type: ipad
+#guid: 111ae14c-4068-4cea-a861-98d50e251321
