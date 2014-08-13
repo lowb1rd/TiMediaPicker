@@ -292,20 +292,33 @@ public class AndroidModule extends KrollModule
         KrollDict d = new KrollDict();
 		if (payload != null)
 		d.put("payload", payload);
-        		
+        String[] projection;
+        projection = new String[] {
+			MediaStore.Images.Thumbnails.DATA,
+			MediaStore.Images.ImageColumns.DATE_TAKEN,
+			MediaStore.Images.ImageColumns.LATITUDE,
+			MediaStore.Images.ImageColumns.LONGITUDE
+		};
 		Cursor cursor = MediaStore.Images.Thumbnails.queryMiniThumbnail(
 				 activity.getContentResolver(), id,
 				 MediaStore.Images.Thumbnails.MINI_KIND,
-				 null );
+				 projection );
 		
 		if( cursor != null && cursor.getCount() > 0 ) {
 			cursor.moveToFirst();
 			String thumb = cursor.getString( cursor.getColumnIndex( MediaStore.Images.Thumbnails.DATA ) );
+			String date = cursor.getString( cursor.getColumnIndex( MediaStore.Images.ImageColumns.DATE_TAKEN ) );
+			String lon = cursor.getString( cursor.getColumnIndex( MediaStore.Images.ImageColumns.LONGITUDE ) );
+			String lat = cursor.getString( cursor.getColumnIndex( MediaStore.Images.ImageColumns.LATITUDE ) );
 			cursor.close();
 			
 			d.put("image", thumb);
-		}
-			
+			d.put("date", date.substring(0, date.length()-4));
+			KrollDict dd = new KrollDict();
+			dd.put("longitude", lon);
+			dd.put("latitude", lat);
+			d.put("location", dd);			
+		}			
 	
 		BitmapFactory.Options bmpFactoryOptions = new BitmapFactory.Options();
 		bmpFactoryOptions.inJustDecodeBounds = true;

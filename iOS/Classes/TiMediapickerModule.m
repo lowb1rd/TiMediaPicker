@@ -9,6 +9,7 @@
 #import "TiHost.h"
 #import "TiUtils.h"
 #import "KrollCallback.h"
+#import <CoreLocation/CoreLocation.h>
 
 @implementation TiMediapickerModule
 
@@ -349,6 +350,17 @@
 		CGSize imageSize = [rep dimensions];
 		[res setObject:[NSNumber numberWithFloat:imageSize.width] forKey:@"width"];
 		[res setObject:[NSNumber numberWithFloat:imageSize.height] forKey:@"height"];
+
+		CLLocation *assetLocation = [asset valueForProperty:ALAssetPropertyLocation];
+		if (assetLocation) {
+			NSDictionary *loc = [NSDictionary dictionaryWithObjectsAndKeys:
+			[NSNumber numberWithDouble:assetLocation.coordinate.latitude], @"latitude", 
+			[NSNumber numberWithDouble:assetLocation.coordinate.longitude], @"longitude", nil];
+			//[NSNumber numberWithDouble:assetLocation.altitude], @"altitude", nil];
+			[res setObject:loc forKey:@"location"];
+		}
+		NSTimeInterval timeStamp = [[asset valueForProperty:ALAssetPropertyDate] timeIntervalSince1970];
+		[res setObject:[NSNumber numberWithDouble: timeStamp] forKey:@"date"];
 
 		if (payload != nil) {
 			[res setObject:payload forKey:@"payload"];

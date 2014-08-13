@@ -133,5 +133,7 @@ The app.js shows a minimal use case for the complete module. All picked images a
     		width: image width in pixels
     		height: image height in pixels
     		size: size in bytes
+            date: unix timestamp of date taken
+            location:  object with "longitude" and "latitude" if location available
     	}
     }
