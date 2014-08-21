@@ -3,7 +3,7 @@
 # during compilation, packaging, distribution, etc.
 #
 version: 1.0.1
-apiversion: 101
+apiversion: 2
 description: -
 author: Nils (github.com/lowb1rd)
 license: -
