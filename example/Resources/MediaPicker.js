@@ -41,7 +41,7 @@ var _nav = {
 	}
 };
 var _config = {
-	size: Ti.Platform.osname == 'ipad' ? 150: Ti.Platform.osname == 'iphone' ? 75 : 96,
+	size: Ti.Platform.osname == 'ipad' ? 148 : (Ti.Platform.osname == 'iphone' ? 75 : 96),
 	dpi_warning: 1024,
 }
 var _lang = {
