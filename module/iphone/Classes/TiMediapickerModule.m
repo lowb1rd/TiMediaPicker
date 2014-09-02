@@ -192,14 +192,8 @@
 
 
 		UIImage *thumbnail = [UIImage imageWithCGImage:[result thumbnail]];
-		CGSize newSize = CGSizeMake(150, 150);
-		UIGraphicsBeginImageContext(newSize);
-		[thumbnail drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
-		UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
-		UIGraphicsEndImageContext();
-
 		NSMutableDictionary *res = [[NSMutableDictionary alloc] init];
-		[res setObject:[[[TiBlob alloc] initWithImage:newImage] autorelease] forKey:@"image"];
+		[res setObject:[[[TiBlob alloc] initWithImage:thumbnail] autorelease] forKey:@"image"];
 
 		ALAssetRepresentation *rep = [result defaultRepresentation];
 		CGSize imageSize = [rep dimensions];
@@ -212,10 +206,6 @@
 			NSUInteger size = [rep size];
 			[res setObject:[NSNumber numberWithFloat:size] forKey:@"size"];
 		}
-
-
-		//[thumbnail release];
-		//[newImage release];
 
 		[self _fireEventToListener:@"gotAsset" withObject:res listener:success thisObject:nil];
 		[res release];
