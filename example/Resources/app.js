@@ -71,8 +71,9 @@ win.open();
 // On iOS, the assetURL cannot be used to get a file handle/blob for the media directly
 // The method getBytesByURL copies the asset into a temp file and returns the path to this tempfile
 /*
+var MediaPickerNative = require('ti.mediapicker');
 if (iOS) {
-    MediaPickerModule.getBytesByURL({
+    MediaPickerNative.getBytesByURL({
         key: item.url,
         success: function(res) {
             var file = Ti.Filesystem.getFile(res.path);
@@ -83,7 +84,7 @@ if (iOS) {
         }
     });				
 } else {
-    var ile = Ti.Filesystem.getFile('file://'+item.url);
+    var file = Ti.Filesystem.getFile('file://'+item.url);
     // for XHR upload do this (it streams the file directly from disk)
     send_array.data = file;
 }
