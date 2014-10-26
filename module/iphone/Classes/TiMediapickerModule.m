@@ -137,15 +137,16 @@
 			NSString * groupName = [group valueForProperty:ALAssetsGroupPropertyName];
 
 
-			NSDictionary *event = [NSDictionary
+			NSMutableDictionary *event = [NSMutableDictionary
 								   dictionaryWithObjectsAndKeys:
 								   groupName,
 								   @"name",
-								   [[[TiBlob alloc] initWithImage:poster] autorelease],
-								   @"image",
 								   NUMINT([group numberOfAssets]),
 								   @"count",
 								   nil];
+			if (poster != nil) {
+				[event setObject:[[[TiBlob alloc] initWithImage:poster] autorelease] forKey:@"image"];
+			}
 			[events addObject:event];
 			[assetGroups addObject:group];
 		} else {

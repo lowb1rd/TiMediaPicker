@@ -119,7 +119,7 @@ exports.MediaPicker.prototype.show = function(cb, max, type, message) {
 			var row = Ti.UI.createTableViewRow({hasChild:true, height: 55, caption:obj.name, width: Ti.UI.FILL, layout: 'horizontal', cnt: obj.count, nr: _env.iOS?nr:key});
 
 			new Element('ImageView', {
-				image:obj.image,
+				image:obj.count?obj.image:'images/no_media.png',
 				width:55, height:55, left: 0,
 			}).addTo(row);
 
