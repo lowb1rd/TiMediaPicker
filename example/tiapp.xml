@@ -2,7 +2,7 @@
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>ti.mediapicker.example</id>
     <name>mediapicker-example</name>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <publisher>l0wbird</publisher>
     <url>https://github.com/lowb1rd/TiMediaPicker</url>
     <description>not specified</description>
@@ -48,5 +48,5 @@
         <target device="mobileweb">false</target>
         <target device="tizen">false</target>
     </deployment-targets>
-    <sdk-version>3.4.0.GA</sdk-version>
+    <sdk-version>3.5.0.GA</sdk-version>
 </ti:app>
