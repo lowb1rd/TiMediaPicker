@@ -3,7 +3,7 @@ var warned = false;
 
 var _env = {}
 _env.iOS = Ti.Platform.osname == 'iphone' || Ti.Platform.osname == 'ipad';
-_env.ldf = Ti.Platform.displayCaps.logicalDensityFactor || 1;
+_env.ldf = _env.iOS ? 1 : Ti.Platform.displayCaps.logicalDensityFactor;
 _env.android = !_env.iOS;
 _env.iOS7 = _env.iOS && parseInt(Ti.Platform.version.split(".")[0],10) >= 7,
 _env.width = function() {return Ti.Platform.displayCaps.platformWidth/this.ldf};
