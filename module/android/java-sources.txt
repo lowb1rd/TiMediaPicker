@@ -1,0 +1,2 @@
+"/Users/InGrowth/Documents/Projects/Ti-MediaPicker/module/android/build/generated/java/ti/mediapicker/TiMediaPickerBootstrap.java"
+"/Users/InGrowth/Documents/Projects/Ti-MediaPicker/module/android/src/ti/mediapicker/TiMediaPickerModule.java"
