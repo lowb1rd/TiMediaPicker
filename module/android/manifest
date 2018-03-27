@@ -2,16 +2,17 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 1.0.4
-apiversion: 2
+version: 2.0.0
+apiversion: 4
 description: -
 author: Nils (github.com/lowb1rd)
 license: -
 copyright: 2014 Nils
+architectures: arm64-v8a armeabi-v7a x86
 
 # these should not be edited
-name: TiMediaPicker
+name: timediapicker
 moduleid: ti.mediapicker
 guid: eebf3061-a7c1-4f22-b665-87ea9771c0b0
 platform: android
-minsdk: 3.5.0.GA
+minsdk: 7.0.0

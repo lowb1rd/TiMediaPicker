@@ -170,7 +170,7 @@ public class TiMediaPickerModule extends KrollModule
 		KrollDict dd = new KrollDict();
 
 		dd.put("items", d);
-		successCallback.callAsync((KrollObject)successCallback,dd);
+		successCallback.callAsync(getKrollObject(), dd);
 	}
 	@Kroll.method
 	public void getPhotos(KrollDict options)
@@ -224,7 +224,7 @@ public class TiMediaPickerModule extends KrollModule
 		KrollDict ddd = new KrollDict();
 		Object[] o = dd.toArray();
 		ddd.put("items", o);
-		successCallback.callAsync((KrollObject)successCallback,ddd);
+		successCallback.callAsync(getKrollObject(), ddd);
 	}
 
 	@Kroll.method
@@ -254,7 +254,7 @@ public class TiMediaPickerModule extends KrollModule
 		
 			if (cursor == null || cursor.getCount() == 0) {
 				d.put("created", 1);
-				//createCallback.callAsync((KrollObject)createCallback,new KrollDict());
+				//createCallback.callAsync(getKrollObject(), new KrollDict());
 				
 				// create thumb
 				Bitmap thumb = MediaStore.Images.Thumbnails.getThumbnail(activity.getContentResolver(), id, MediaStore.Images.Thumbnails.MINI_KIND, null);
@@ -278,7 +278,7 @@ public class TiMediaPickerModule extends KrollModule
 		}
 		
 		//return d;
-		successCallback.callAsync((KrollObject)successCallback,d);
+		successCallback.callAsync(getKrollObject(), d);
 	}
 	
     
@@ -337,6 +337,6 @@ public class TiMediaPickerModule extends KrollModule
         long length = file.length();
 		d.put("size", length);
 
-        successCallback.callAsync((KrollObject)successCallback,d);
+        successCallback.callAsync(getKrollObject() ,d);
 	} 
 }
